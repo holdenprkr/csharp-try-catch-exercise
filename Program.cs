@@ -47,7 +47,7 @@ class Program
         {
             addressBook.AddContact(sue);
         }
-        catch (ArgumentException ex)
+        catch (ArgumentException)
         {
             Console.WriteLine("A contact has already been added using this email.");
         }
@@ -74,7 +74,7 @@ class Program
                 Console.WriteLine($"Email: {contact.Email}");
                 Console.WriteLine($"Address: {contact.Address}");
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 Console.WriteLine($"The email {email} was not found in the address book.");
             }
